@@ -7,7 +7,7 @@
 
 @interface NSArray (MSFoundation)
 
-/** Returns the object in the array with the highest index value, or nil if the array is empty. */
+/** Returns the first object in the array, or nil if the array is empty. */
 - (id)firstObject;
 
 /** Invokes isEqual: on the result of valueForKey: for each of the receiver's items, returning the lowest index with a matching value.
