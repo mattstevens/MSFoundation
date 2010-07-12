@@ -9,6 +9,8 @@
 
 - (NSString *)stringByTrimmingWhitespace;
 - (NSString *)stringByRemovingDuplicateWhitespace;
+- (NSString *)stringByURLEncoding;
+- (NSString *)stringByURLDecoding;
 
 - (BOOL)isEmpty;
 - (BOOL)containsOnlyCharactersInSet:(NSCharacterSet *)set;

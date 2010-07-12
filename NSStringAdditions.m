@@ -20,6 +20,14 @@
 	return [filteredArray componentsJoinedByString:@" "];
 }
 
+- (NSString *)stringByURLEncoding {
+	return [(NSString*)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)self, NULL, CFSTR("!*'();:@&=+$,/?%#[]"), kCFStringEncodingUTF8) autorelease];
+}
+
+- (NSString *)stringByURLDecoding {
+	return [(NSString*)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (CFStringRef)self, NULL, kCFStringEncodingUTF8) autorelease];
+}
+
 - (BOOL)isEmpty {
 	return ([self length] < 1);
 }
