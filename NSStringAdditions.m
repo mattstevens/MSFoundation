@@ -1,4 +1,4 @@
-//  Copyright (c) 2009 Matt Stevens
+//  Copyright (c) 2009-2010 Matt Stevens
 //
 //  Licensed under the MIT License:
 //  http://www.opensource.org/licenses/mit-license.php
@@ -25,7 +25,7 @@
 }
 
 - (NSString *)stringByURLDecoding {
-	return [(NSString*)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (CFStringRef)self, NULL, kCFStringEncodingUTF8) autorelease];
+	return [(NSString*)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (CFStringRef)self, CFSTR(""), kCFStringEncodingUTF8) autorelease];
 }
 
 - (BOOL)isEmpty {
