@@ -38,7 +38,9 @@
 }
 
 - (void)setBundleIdentifier:(NSString *)theBundleId {
-	bundleId = [theBundleId copy];
+	theBundleId = [theBundleId copy];
+	[bundleId release];
+	bundleId = theBundleId;
 }
 
 - (id)objectForKey:(NSString *)defaultName {
