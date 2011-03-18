@@ -32,6 +32,7 @@
 }
 
 - (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[syncTimer invalidate];
 	[syncTimer release];
 	[bundleId release];
