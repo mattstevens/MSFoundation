@@ -5,14 +5,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, MSDataEncoding) {
-	MSNoDataEncoding,
-	MSBase32DataEncoding,
-	MSBase64DataEncoding
-};
-
 @interface NSData (MSFoundation)
 
-+ (NSData *)ms_dataWithData:(NSData *)data encoding:(MSDataEncoding)encoding;
++ (NSData *)ms_dataWithBase32String:(NSString *)base32String;
++ (NSData *)ms_dataWithBase64String:(NSString *)base64String;
+
+- (NSString *)ms_base32String;
+- (NSString *)ms_base64String;
 
 @end
