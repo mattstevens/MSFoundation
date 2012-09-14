@@ -1,8 +1,3 @@
-//  Copyright (c) 2009-2010 Matt Stevens
-//
-//  Licensed under the MIT License:
-//  http://www.opensource.org/licenses/mit-license.php
-
 #import "NSStringAdditions.h"
 
 @implementation NSString (MSFoundataion)
@@ -12,9 +7,9 @@
 }
 
 - (NSString *)stringByRemovingDuplicateWhitespace {
-	NSCharacterSet *whitespaces = [NSCharacterSet whitespaceAndNewlineCharacterSet];	
+	NSCharacterSet *whitespaces = [NSCharacterSet whitespaceAndNewlineCharacterSet];
 	NSPredicate *noEmptyStringsPredicate = [NSPredicate predicateWithFormat:@"SELF != ''"];
-	
+
 	NSArray *parts = [self componentsSeparatedByCharactersInSet:whitespaces];
 	NSArray *filteredArray = [parts filteredArrayUsingPredicate:noEmptyStringsPredicate];
 	return [filteredArray componentsJoinedByString:@" "];

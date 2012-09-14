@@ -1,8 +1,3 @@
-//  Copyright (c) 2009 Matt Stevens
-//
-//  Licensed under the MIT License:
-//  http://www.opensource.org/licenses/mit-license.php
-
 #import <Foundation/Foundation.h>
 
 @interface NSNotificationCenter (MSFoundation)

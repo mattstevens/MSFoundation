@@ -1,16 +1,4 @@
-//  Copyright (c) 2009-2011 Matt Stevens
-//
-//  Licensed under the MIT License:
-//  http://www.opensource.org/licenses/mit-license.php
-
 #import "MSRemoteUserDefaults.h"
-
-@interface MSRemoteUserDefaults (Private)
-
-- (void)defaultsDidChange;
-
-@end
-
 
 @implementation MSRemoteUserDefaults
 
