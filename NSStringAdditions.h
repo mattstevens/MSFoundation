@@ -3,12 +3,8 @@
 @interface NSString (MSFoundation)
 
 - (NSString *)ms_stringByTrimmingWhitespace;
-- (NSString *)ms_stringByRemovingDuplicateWhitespace;
 - (NSString *)ms_stringByURLEncoding;
 - (NSString *)ms_stringByURLDecoding;
-
-- (BOOL)ms_isEmpty;
-- (BOOL)ms_containsOnlyCharactersInSet:(NSCharacterSet *)set;
 
 @end
 
