@@ -1,4 +1,4 @@
-#import "NSNotificationCenterAdditions.h"
+#import "NSNotificationCenter+MainThread.h"
 
 @implementation NSNotificationCenter (MSFoundation)
 

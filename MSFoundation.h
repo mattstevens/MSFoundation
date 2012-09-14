@@ -2,5 +2,5 @@
 
 #import "NSArrayAdditions.h"
 #import "NSBundleAdditions.h"
-#import "NSNotificationCenterAdditions.h"
+#import "NSNotificationCenter+MainThread.h"
 #import "NSStringAdditions.h"
