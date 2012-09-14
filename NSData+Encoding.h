@@ -1,3 +1,5 @@
+// Requires Security.framework
+
 #import <Foundation/Foundation.h>
 
 @interface NSData (MSFoundation)
