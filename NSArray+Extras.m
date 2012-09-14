@@ -29,7 +29,7 @@
 	return [self objectAtIndex:index];
 }
 
-- (BOOL)containsObjectWithValue:(id)value forKey:(NSString *)key {
+- (BOOL)ms_containsObjectWithValue:(id)value forKey:(NSString *)key {
 	NSUInteger index = [self ms_indexOfObjectWithValue:value forKey:key];
 	return (index != NSNotFound);
 }
