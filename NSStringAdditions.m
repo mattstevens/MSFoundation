@@ -2,11 +2,11 @@
 
 @implementation NSString (MSFoundataion)
 
-- (NSString *)stringByTrimmingWhitespace {
+- (NSString *)ms_stringByTrimmingWhitespace {
 	return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *)stringByRemovingDuplicateWhitespace {
+- (NSString *)ms_stringByRemovingDuplicateWhitespace {
 	NSCharacterSet *whitespaces = [NSCharacterSet whitespaceAndNewlineCharacterSet];
 	NSPredicate *noEmptyStringsPredicate = [NSPredicate predicateWithFormat:@"SELF != ''"];
 
@@ -15,27 +15,27 @@
 	return [filteredArray componentsJoinedByString:@" "];
 }
 
-- (NSString *)stringByURLEncoding {
+- (NSString *)ms_stringByURLEncoding {
 	return [(NSString*)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)self, NULL, CFSTR("!*'();:@&=+$,/?%#[]"), kCFStringEncodingUTF8) autorelease];
 }
 
-- (NSString *)stringByURLDecoding {
+- (NSString *)ms_stringByURLDecoding {
 	return [(NSString*)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (CFStringRef)self, CFSTR(""), kCFStringEncodingUTF8) autorelease];
 }
 
-- (BOOL)isEmpty {
+- (BOOL)ms_isEmpty {
 	return ([self length] < 1);
 }
 
-- (BOOL)containsOnlyCharactersInSet:(NSCharacterSet *)set {
-	return [[self stringByTrimmingCharactersInSet:set] isEmpty];
+- (BOOL)ms_containsOnlyCharactersInSet:(NSCharacterSet *)set {
+	return [[self stringByTrimmingCharactersInSet:set] ms_isEmpty];
 }
 
 @end
 
 @implementation NSMutableString (MSFoundataion)
 
-- (void)trimWhitespace {
+- (void)ms_trimWhitespace {
 	CFStringTrimWhitespace((CFMutableStringRef)self);
 }
 

@@ -2,18 +2,18 @@
 
 @interface NSString (MSFoundation)
 
-- (NSString *)stringByTrimmingWhitespace;
-- (NSString *)stringByRemovingDuplicateWhitespace;
-- (NSString *)stringByURLEncoding;
-- (NSString *)stringByURLDecoding;
+- (NSString *)ms_stringByTrimmingWhitespace;
+- (NSString *)ms_stringByRemovingDuplicateWhitespace;
+- (NSString *)ms_stringByURLEncoding;
+- (NSString *)ms_stringByURLDecoding;
 
-- (BOOL)isEmpty;
-- (BOOL)containsOnlyCharactersInSet:(NSCharacterSet *)set;
+- (BOOL)ms_isEmpty;
+- (BOOL)ms_containsOnlyCharactersInSet:(NSCharacterSet *)set;
 
 @end
 
 @interface NSMutableString (MSFoundation)
 
-- (void)trimWhitespace;
+- (void)ms_trimWhitespace;
 
 @end
