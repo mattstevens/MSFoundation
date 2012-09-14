@@ -3,8 +3,6 @@
 @interface NSString (MSFoundation)
 
 - (NSString *)ms_stringByTrimmingWhitespace;
-- (NSString *)ms_stringByURLEncoding;
-- (NSString *)ms_stringByURLDecoding;
 
 @end
 
