@@ -1,4 +1,4 @@
-#import "NSArrayAdditions.h"
+#import "NSArray+Extras.h"
 
 @implementation NSArray (MSFoundataion)
 
@@ -29,7 +29,7 @@
 	return [self objectAtIndex:index];
 }
 
-- (BOOL)ms_containsObjectWithValue:(id)value forKey:(NSString *)key {
+- (BOOL)containsObjectWithValue:(id)value forKey:(NSString *)key {
 	NSUInteger index = [self ms_indexOfObjectWithValue:value forKey:key];
 	return (index != NSNotFound);
 }

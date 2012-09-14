@@ -1,4 +1,4 @@
-#import "NSBundleAdditions.h"
+#import "NSBundle+Extras.h"
 
 @implementation NSBundle (MSFoundataion)
 

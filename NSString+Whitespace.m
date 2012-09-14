@@ -1,4 +1,4 @@
-#import "NSStringAdditions.h"
+#import "NSString+Whitespace.h"
 
 @implementation NSString (MSFoundataion)
 
